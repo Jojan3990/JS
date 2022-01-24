@@ -1,0 +1,5 @@
+in web console i can do
+document.getElementsByTagName('h1')  which will return an array
+document.getElementsByTagName('h1')[0]  if i do this first h1 tag is recieved
+document.getElementsByTagName('h1')[0].style.fontSize="100px"  this changes h1 first element to fontsize 100
+document.getElementsByTagName('h1')[0].style.visibility="hidden"
