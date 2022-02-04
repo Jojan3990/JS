@@ -3,3 +3,75 @@ document.getElementsByTagName('h1')  which will return an array
 document.getElementsByTagName('h1')[0]  if i do this first h1 tag is recieved
 document.getElementsByTagName('h1')[0].style.fontSize="100px"  this changes h1 first element to fontsize 100
 document.getElementsByTagName('h1')[0].style.visibility="hidden"
+
+Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions.
+
+// function expression
+let x = function(x, y) {
+   return x * y;
+}
+
+can be written as
+
+// using arrow functions
+let x = (x, y) => x * y;
+
+let greet = () => console.log('Hello');
+greet(); // Hello
+
+let greet = x => console.log(x);
+greet('Hello'); // Hello 
+
+let age = 5;
+
+let welcome = (age < 18) ?
+  () => console.log('Baby') :
+  () => console.log('Adult');
+
+welcome(); // Baby
+
+
+
+
+let sum = (a, b) => {
+    let result = a + b;
+    return result;
+}
+
+let result1 = sum(5,7);
+console.log(result1); // 12
+
+
+
+
+function Person() {
+    this.name = 'Jack',
+    this.age = 25,
+    this.sayName = function () {
+
+        // this is accessible
+        console.log(this.age);
+
+        function innerFunc() {
+
+            // this refers to the global object
+            console.log(this.age);
+            console.log(this);
+        }
+
+        innerFunc();
+
+    }
+}
+
+let x = new Person();
+x.sayName();
+output:-
+25
+undefined
+Window {}
+
+
+
+
+
